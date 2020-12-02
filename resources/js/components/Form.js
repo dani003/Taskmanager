@@ -47,7 +47,11 @@ class Form extends Component {
             <div key={task.id} className="media">
                 <div className="media-body">
                     <div>
-                        {task.name}
+                        {task.name}{' '}
+                        <span className="text-muted">
+                            <br/>
+                            by {task.user.name} | {task.updated_at.split('T').slice(1)}
+                        </span>
                         <Link to={`/${task.id}/edit`} className="btn btn-sm btn-success float-right">
                             Update 
                         </Link>
@@ -57,6 +61,7 @@ class Form extends Component {
                                 Delete
                         </button>
                     </div>
+                    <hr/>
                 </div>
             </div>
         ));
