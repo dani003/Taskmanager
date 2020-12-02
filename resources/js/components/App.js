@@ -38,12 +38,9 @@ if (document.getElementById('root')) {
 
             <hr />
             <Switch>
-                <Route exact path="/">
-                    <Form />
-                </Route>
-                <Route path="/:id/edit">
-                    <TaskEdit />
-                </Route>
+
+                <Route exact path="/:id/edit" component={TaskEdit} />
+                <Form />
                 <Route path="/dashboard">
                     <Dashboard />
                 </Route>
